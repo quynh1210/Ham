@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arguments Array</title>
+</head>
+<body>
+<script type="text/javascript">
+    function myFunction() {
+        let firstAgr = arguments[0];
+        let secondArg = arguments[1];
+        alert("firstArg is: " + firstAgr);
+        alert("secondArg is: " + secondArg);
+    }
+    myFunction("welcome","wonderland");
+</script>
+<title>Scoping Example</title>
+<script type="text/javascript">
+    let aNewvariable = " is global.";
+    function doSomeThing(incomingBits) {
+        alert("global var outside the function: " + aNewvariable);
+        alert("Local var outside the function: " + incomingBits);
+    }
+</script>
+<script type="text/javascript">
+    doSomeThing("is a local variable");
+    alert("Global var outside the function: " + aNewvariable);
+    alert("Local var outside the function: " + incomingBits);
+</script>
+<title>Order Fruit</title>
+<script type="text/javascript">
+    function orderFruit(){
+        let total = 0;
+        return total;
+    }
+</script>
+<script type="text/javascript">
+    let result = orderFruit();
+    alert("The total is: " + result);
+</script>
+</body>
+<script>
+    function myFunction() {
+        let myNum = 10;
+        function showNum() {
+            alert(myNum);
+        }
+        return showNum();
+    }
+    let callFunc = myFunction();
+    myFunction();
+</script>
+</html>

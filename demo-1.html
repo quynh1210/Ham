@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<body>
+Số mũ của: <input type="text" oninput="calculate()" id="input"> mũ 3 là :
+<span id="result" ></span>
+</body>
+<script>
+    function multiphy(number){
+        let result = number*number*number;
+        return result;
+    }
+    function calculate(){
+        let input = document.getElementById("input").value;
+        let result = multiphy(input);
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+<script>
+    function turnOn(machine){
+        machine = {
+            isOn: true
+        };
+    }
+    let computer = {
+        isOn: false
+    };
+    console.log(computer.isOn);
+</script>
+</html>
